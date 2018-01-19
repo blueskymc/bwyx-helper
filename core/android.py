@@ -76,7 +76,8 @@ def parse_answer_area(source_file, text_area_file):
     print("screen width: {0}, screen height: {1}".format(image.size[0], image.size[1]))
 
     #region = image.crop((20, 140, wide - 20, 650))  # 杂牌
-    region = image.crop((30, 150, wide - 30, 850))  # 红米
+    region = image.crop((70, 250, wide - 70, 850))  # 红米
+    #region = image.crop((70, 340, wide - 70, 1280))  # 魅族
     region.save(text_area_file)
 
 

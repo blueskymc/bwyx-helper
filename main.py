@@ -78,7 +78,7 @@ def main(testfile):
     choose_answer = match_words(answers, (keyword, q1, q2, q3, q4), four_answers=four_answers)
     end = time.time()
     print("use {0} 秒".format(end - start))
-    # x = input()
+    #x = input()
     # if x == 'ok':
     #     if choose_answer:
     #         commit_answer(choose_answer)

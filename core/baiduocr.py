@@ -24,8 +24,8 @@ def analysis(image, four_answers=False):
     if result:
         ask = ''
         lines = result['words_result']
-        for line in lines:
-            print(line['words'])
+        # for line in lines:
+        #     print(line['words'])
 
         q1, q2, q3, q4 = ('A', 'B', 'C', 'D')
         if four_answers:
@@ -65,4 +65,16 @@ def analysis(image, four_answers=False):
                 q3 = lines[5]['words']
 
         print('QUESTION:' + ask)
+        if ':' in q1:
+            q1 = q1[2:]
+        if ':' in q2:
+            q2 = q2[2:]
+        if ':' in q3:
+            q3 = q3[2:]
+        if ':' in q4:
+            q4 = q4[2:]
+        print(ask)
+        print(q1)
+        print(q2)
+        print(q3)
         return ask, q1, q2, q3, q4
